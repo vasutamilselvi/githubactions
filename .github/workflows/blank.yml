@@ -1,17 +1,25 @@
 name: my-workflow
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+
     steps:
-      name: my 1st tep
-      run echo "my 1 st step"
-      name: my 2nd step
-      run echo "my 2 nd step"
+      - name: My 1st step
+        run: echo "My 1st step"
+
+      - name: My 2nd step
+        run: echo "My 2nd step"
+
   deploy:
+    runs-on: ubuntu-latest
+
     steps:
-      name: my 3rd step
-      run echo "my 3rd step"
-      name: my 4th step
-      run echo "my 4th step"
+      - name: My 3rd step
+        run: echo "My 3rd step"
+
+      - name: My 4th step
+        run: echo "My 4th step"
